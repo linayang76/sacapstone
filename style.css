@@ -1,0 +1,265 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .title {
+    color: #fcfcfc;
+    text-align: center;
+    justify-content:center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .split-screen {
+    position: absolute;
+    top: 35em; /*adjust as needed (controles the height of the split screen*/
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 15em); /* adjust height of the split screen*/
+    z-index: -1;
+    display: flex;
+  }
+  
+  .video-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .player-container {
+    flex: 1;
+    position: relative;
+  }
+  
+  #localVideo {
+    width: 100%;
+    height: 100%;
+    max-height: 500x;
+    border: 10px solid #085038;
+  }
+  
+  #toggleCamera {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #085038;
+    color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+  
+  }
+  
+  iframe {
+    border: none;
+  }
+  
+  :root {
+    font-size: 62.4%;
+    --color-primary: #1e1e20;
+    --color-secondary: #1c5833;
+    --color-font: #ffffffe6;
+  
+
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  p,
+  i,
+  h1 {
+    color: var(--color-font);
+  }
+  
+  i {
+    font-size: 3.2rem;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .container1 {
+    width: min(42.5rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .painel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    width: 20rem;
+    margin-block: 5rem;
+    padding: 1 rem;
+    border-radius: 10rem;
+    -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow);
+    box-shadow: 0px
+  }
+  
+  
+  
+  
+  .list {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .todo-list {
+    width: 100%;
+    max-width: 540px;
+    background: #ffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+  }
+  
+  .todo-list h2 {
+    color: #085038;
+    display: flex;
+    align-items: left;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #085038;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-26-512.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+  
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::before {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png);
+    background-position: relative;
+  }
+  
+  ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+  }
+  
+  ul li span:hover {
+    background: #edeef0;
+  }
+
+
+  .background-sec{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-size:cover;
+    z-index:-1;
+  }
+
+  .facetime-bg{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 5em); /*adjust hiehgt of the split screen*/
+    top: 20em; /*adjust to move the split screen lower*/
+    left: 9.9px;
+    z-index:-1;
+  }
+
+  .facetime-bg img{
+    max-width: 100%;
+    max-height: 100%;
+  }
