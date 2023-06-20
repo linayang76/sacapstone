@@ -1,4 +1,3 @@
-
 var localStream;
 var isCameraOn = false;
 var audioContext;
@@ -87,3 +86,97 @@ function showTask(){
   listContainer.innerHTML = localStorage.getItem('data');
 }
 showTask()
+
+
+// Pomodoro Timer 
+let minutes = 25;
+let seconds = 0;
+let isTimerRunning = false;
+let timerInterval;
+
+function startWorkSession() {
+  minutes = 25;
+  seconds = 1;
+  updateTimer();
+}
+
+function startBreakSession() {
+  minutes = 5;
+  seconds = 1;
+  updateTimer();
+}
+
+function startTimer() {
+  if (!isTimerRunning) {
+    isTimerRunning = true;
+    timerInterval = setInterval(updateTimer, 1000);
+  }
+}
+
+function pauseTimer() {
+  clearInterval(timerInterval);
+  isTimerRunning = false;
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  isTimerRunning = false;
+
+  if (minutes === 25) {
+    startWorkSession();
+  } else {
+    startBreakSession();
+  }
+}
+
+function updateTimer() {
+  seconds--;
+  if (seconds < 0) {
+    minutes--;
+    seconds = 59;
+  }
+
+  if (minutes === 0 && seconds === 0) {
+    clearInterval(timerInterval);
+    isTimerRunning = false;
+    // Perform actions when timer reaches 0 (e.g., play sound, show notification)
+  }
+
+  const timerElement = document.getElementById('timer');
+  timerElement.innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+/*multiple youtube study with me videos*/
+(function() {
+  var videoIds = ['jfKfPfyJRdk', 'rUxyKA_-grg', '6D2p1UYM1Yw']; // Replace with your YouTube video IDs
+  var playerDiv = document.getElementById('video-player');
+  var previousButton = document.getElementById('previous-button');
+  var nextButton = document.getElementById('next-button');
+
+  var currentIndex = 0;
+
+  previousButton.addEventListener('click', function() {
+    playPreviousVideo();
+  });
+
+  nextButton.addEventListener('click', function() {
+    playNextVideo();
+  });
+
+  loadVideo(currentIndex);
+
+  function loadVideo(index) {
+    currentIndex = index;
+    playerDiv.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoIds[index] + '?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+  }
+
+  function playPreviousVideo() {
+    currentIndex = (currentIndex - 1 + videoIds.length) % videoIds.length;
+    loadVideo(currentIndex);
+  }
+
+  function playNextVideo() {
+    currentIndex = (currentIndex + 1) % videoIds.length;
+    loadVideo(currentIndex);
+  }
+})();
