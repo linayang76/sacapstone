@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Lo-Fi </title>
+  <title>Lo-Fi Study Corner</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -17,68 +17,92 @@
       <source src="backgroundvid.mp4" type="video/mp4">
     </video>
   </div>
-
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br>
   <div class="facetime-bg">
     <img src="callwindow.png" type="img/png">
   </div>
   <div class="container">
-    <h1 class="title">Lo-Fi Study Corner</h1>
-    <br><br><br><br><br>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Welcome to</h1>
+        <br>
+        <h1 class="title">Lo-Fi Study Lounge</h1>
+      </div>
+      <h2>Our site assembles the applications students use to enhance efficiency of study into one site, solving distractions that occur when swiping through applications on devices.</h2>
+    </div>
 
+    
+
+    
     <br>
     <section>
+      
       <div class="container1">
-        <h1>pomodoro</h1>
-
-        <div class="Painel">
-          <p id="work">work</p>
-          <p id="break">break</p>
-        </div>
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        
        
-        <div class="timer">
-          <div class="circle">
-            <div class="time">
-              <p id="minutes">25</p>
-              <p>:</p>
-              <p id="seconds">00</p>
+       <!-- Pomodoro Timer page -->
+      <div class="pomodoro-page">
+        <div class="timer-container">
+          <h1>Pomodoro Timer</h1>
+          <br>
+          <h1 class="timer" id="timer">25:00</h1>
+          <div class="buttons">
+            <div class="buttons1">
+              <button class="button" onclick="startWorkSession()">Work</button>
+              <button class="button" onclick="startBreakSession()">Break</button>
             </div>
+            <button class="button" onclick="startTimer()">Start</button>
+            <button class="button" onclick="pauseTimer()">Pause</button>
           </div>
         </div>
-
-        <div class="controls">
-          <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
-          <a id="reset" href="/"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+      </div>
     </section>
-
+    
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     <div class="split-screen">
       <div class="video-container">
         <video id="localVideo" autoplay></video>
-        <button id="toggleCamera" onclick="toggleCamera()">Toggle Camera</button>
+        <button id="toggleCamera" onclick="toggleCamera()">Turn On Camera</button>
       </div>
       <br><br><br><br><br><br><br><br><br>
       <div class="player-container">
         <br><br>
         <!-- study with me video from yt-->
-        <iframe id="youtubePlayer" width="100%" height="315"
+        <div id="video-player"></div>
+
+        <div class="video-buttons">
+          <button id="previous-button">←</button>
+          <button id="next-button">→</button>
+        </div>
+        <!--
+        <iframe id="youtubePlayer" width="170%" height="66%"
           src="https://www.youtube.com/embed/vNaZ5dlExP4?autoplay=1&mute=1" frameborder="0"
           allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+        -->
+        
+        
         <!-- music linked from spotify-->
+        <!--
         <iframe style="border-radius:12px"
           src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" width="100%"
-          height="152" frameBorder="0" allowfullscreen=""
+          height="200" frameBorder="0" allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        -->
 
+        
       </div>
     </div>
   </div>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
   <!--to do list-->
   <div class="list">
     <div class="todo-list">
