@@ -146,9 +146,9 @@ function updateTimer() {
   timerElement.innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
-/*multiple youtube study with me videos*/
+//multiple youtube study with me videos//
 (function() {
-  var videoIds = ['jfKfPfyJRdk', 'rUxyKA_-grg', '6D2p1UYM1Yw']; // Replace with your YouTube video IDs
+  var videoIds = ['7JPTlqRRf1w', 'DXT9dF-WK-I', 'grBFMP3HDZA']; // Replace with your YouTube video IDs
   var playerDiv = document.getElementById('video-player');
   var previousButton = document.getElementById('previous-button');
   var nextButton = document.getElementById('next-button');
@@ -167,7 +167,7 @@ function updateTimer() {
 
   function loadVideo(index) {
     currentIndex = index;
-    playerDiv.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoIds[index] + '?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    playerDiv.innerHTML = '<iframe width="580" height="300" src="https://www.youtube.com/embed/' + videoIds[index] + '?rel=0&autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
   }
 
   function playPreviousVideo() {
