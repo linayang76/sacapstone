@@ -69,8 +69,8 @@ body {
   font-family: Arial, sans-serif;
   font-size: 20px;
   border-radius: 10px;
-  position:absolute;
-  transform: translate(-25%, 600%);
+  position:relative;
+  transform: translate(-25%, 425%);
   z-index:5;
 }
 
@@ -368,7 +368,7 @@ ul li span:hover {
   justify-content: center;
   margin-top: 50px;
   transform: translate(40%, 390%);
-  cursor: auto;
+  position:relative;
   Z-index:5;
 }
 
